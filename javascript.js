@@ -10,27 +10,47 @@ let playerChoice = document.getElementById("playerChoice")
 
 
 function game(){
+
     for (i=0; i<=5; i++)
     {
+
         cpuSelection = computerPlay()
         validChoiceTest()
 
         if(playerSelection===cpuSelection){
 
+            playerChoice.textContent = "Player chose: " + viableChoices[playerSelection] + "!"
+            cpuChoice.textContent = "CPU chose: " + viableChoices[cpuSelection] + "!"
+            return outcome.textContent = "Outcome: Draw!"
 
-            return outcome.textContent = "Draw!"
+        } else if(playerSelection===0 && cpuSelection===2){
+            playerChoice.textContent = "Player chose: " + viableChoices[playerSelection] + "!"
+            cpuChoice.textContent = "CPU chose: " + viableChoices[cpuSelection] + "!"
+            
+            return outcome.textContent = "Outcome: Player WINS!"
 
-        } 
+        }
+        else if(playerSelection===2 && cpuSelection===0){
+            playerChoice.textContent = "Player chose: " + viableChoices[playerSelection] + "!"
+            cpuChoice.textContent = "CPU chose: " + viableChoices[cpuSelection] + "!"
+            
+            return outcome.textContent = "Outcome: CPU WINS!"
+
+        }
 
         else if(playerSelection>cpuSelection){
-
-            return outcome.textContent = "Player WINS!"
+            playerChoice.textContent = "Player chose: " + viableChoices[playerSelection] + "!"
+            cpuChoice.textContent = "CPU chose: " + viableChoices[cpuSelection] + "!"
+            
+            return outcome.textContent = "Outcome: Player WINS!"
 
         } 
 
         else{
-
-            return outcome.textContent = "CPU WINS! You LOST!"
+            playerChoice.textContent = "Player chose: " + viableChoices[playerSelection] + "!"
+            cpuChoice.textContent = "CPU chose: " + viableChoices[cpuSelection] + "!"
+            
+            return outcome.textContent = "Outcome: CPU WINS! You LOST!"
 
         }
     }

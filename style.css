@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+#gameBody{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-size: 48px;
+    border-style: solid;
+    padding:20px 40px;
+    border-radius: 25px;
+}
+.choiceBlock{
+    width: 600px;
+    display: flex;
+    flex: 1;
+    font-size: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px;
+}
+#outcome{
+    font-size: 25px;
+    font-weight: 700;
+}
